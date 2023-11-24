@@ -1,0 +1,30 @@
+public class Sobrecarga {
+
+    // Sobrecarga de método para sumar enteros
+    public int sumar(int a, int b) {
+        return a + b;
+    }
+
+    public int sumar(int a, int b, int c) {
+        return a + b;
+    }
+
+    // Sobrecarga de método para sumar flotantes
+    public float sumar(float a, float b) {
+        return a + b;
+    }
+
+    // Sobrecarga de método para concatenar cadenas
+    public String sumar(String a, String b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        // Uso de la calculadora
+        Calculadora calculadora = new Calculadora();
+
+        System.out.println(calculadora.sumar(5, 10, 3));          // Suma de enteros
+        System.out.println(calculadora.sumar(3.5f, 2.5f));    // Suma de flotantes
+        System.out.println(calculadora.sumar("Hola", " Mundo"));  // Concatenación de cadenas
+    }
+}
