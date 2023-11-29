@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client-Side Rendering con PHP y Vue.js</title>
+</head>
+<body>
+
+<div id="app">
+    <p>{{ mensaje }}</p>
+    <p>Fecha: {{ fecha }}</p>
+    <button @click="cargarDatos">Cargar Datos</button>
+</div>
+
+<!-- Ejecuto una función VUE sencilla como ejemplo -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script> <!-- Llamo al core de vue por CDN -->
+<script>
+new Vue({
+    el: '#app',
+    data: {
+        mensaje: '',
+        fecha: ''
+    },
+    methods: {
+        cargarDatos() {
+            // Realiza una solicitud AJAX a backend.php al hacer clic en el botón
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'backend.php', true);
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // Parsea la respuesta JSON y actualiza los datos de Vue
+                    var datos = JSON.parse(xhr.responseText);
+                    this.mensaje = datos.mensaje;
+                    this.fecha = datos.fecha;
+                }
+            };
+            xhr.send();
+        }
+    }
+});
+</script>
+
+</body>
+</html>
