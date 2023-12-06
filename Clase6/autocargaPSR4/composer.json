@@ -1,0 +1,15 @@
+{
+    "name": "facu/autocarga-psr4",
+    "autoload": {
+        "psr-4": {
+            "MiNamespace\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Fa cu",
+            "email": "facubdt@gmail.com"
+        }
+    ],
+    "require": {}
+}
