@@ -1,0 +1,7 @@
+POST /login
+Content-Type: application/json
+
+{
+  "username": "usuario",
+  "password": "contrasena"
+}

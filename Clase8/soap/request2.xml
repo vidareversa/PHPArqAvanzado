@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.ejemplo.com/webservice">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetDataRequest>
+         <web:SessionID>ABC123</web:SessionID>
+         <web:DataID>2</web:DataID>
+      </web:GetDataRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
