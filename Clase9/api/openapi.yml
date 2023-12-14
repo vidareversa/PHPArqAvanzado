@@ -1,0 +1,75 @@
+openapi: 3.0.0
+info:
+  title: API de Los Simpsons
+  version: 1.0.0
+paths:
+  /characters:
+    get:
+      summary: Obtiene la lista de personajes de Los Simpsons
+      responses:
+        '200':
+          description: Éxito
+          content:
+            application/json:
+              example:
+                characters:
+                  - name: Homer
+                    age: 39
+                  - name: Marge
+                    age: 36
+                  # ... otros personajes
+  /characters/{id}:
+    get:
+      summary: Obtiene información detallada de un personaje
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del personaje
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Éxito
+          content:
+            application/json:
+              example:
+                name: Homer
+                age: 39
+                episodes:
+                  - title: Episode 1
+                  - title: Episode 2
+                  # ... otros episodios
+  /episodes:
+    get:
+      summary: Obtiene la lista de episodios de Los Simpsons
+      responses:
+        '200':
+          description: Éxito
+          content:
+            application/json:
+              example:
+                episodes:
+                  - title: Episode 1
+                  - title: Episode 2
+                  # ... otros episodios
+  /episodes/{id}:
+    get:
+      summary: Obtiene información detallada de un episodio
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del episodio
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Éxito
+          content:
+            application/json:
+              example:
+                title: Episode 1
+                description: Descripción del episodio
+                season: 1
+                # ... otros detalles
