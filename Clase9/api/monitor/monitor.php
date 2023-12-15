@@ -3,7 +3,6 @@
 // Define los endpoints que deseas monitorear
 $endpoints = array(
     'http://localhost/EducacionIt/Clase9/api/2cache.php?trigger=2',
-    //aca pueden ir mas endpoints
 );
 
 $timeout = 5; //tiempo de espera maximo a una API

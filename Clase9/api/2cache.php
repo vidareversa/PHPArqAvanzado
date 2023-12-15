@@ -5,9 +5,9 @@ require_once 'storage/simpsonsData.php';
 // Define feature flags para cada método
 $featureFlags = array(
     'GET'    => true,
-    'POST'   => false, // Puedes cambiar esto dinámicamente según tus necesidades
+    'POST'   => true, // Puedes cambiar esto dinámicamente según tus necesidades
     'PUT'    => true,
-    'DELETE' => false
+    'DELETE' => true
 );
 
 // Ruta de caché (ajústala según tus necesidades)
@@ -21,7 +21,6 @@ if (array_key_exists($requestMethod, $featureFlags)) {
     if ($featureFlagEnabled) {
         // Intenta cargar desde la caché
         $cachedData = loadFromCache($cacheDirectory, $cacheKey);
-
         if ($cachedData === false) { //si no hay datos en caché...
             if ($requestMethod === 'GET') {
                 if ($_GET['trigger'] == 2) {
@@ -34,7 +33,6 @@ if (array_key_exists($requestMethod, $featureFlags)) {
 
                     // Guarda en caché la respuesta
                     saveToCache($cacheDirectory, $cacheKey, json_encode($response));
-
                     echo json_encode($response);
                 } else {
                     echo json_encode(array("error" => "Disparador incorrecto"));

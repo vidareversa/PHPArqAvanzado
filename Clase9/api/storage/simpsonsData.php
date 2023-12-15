@@ -4,7 +4,7 @@
 $simpsonsData = array(
     "characters" => array(
         array(
-            "name" => "Max Power",
+            "name" => "Homer",
             "age" => 39,
             "links" => array(
                 "self" => array("href" => "/simpsons/character/1", "method" => "GET"),
@@ -20,7 +20,7 @@ $simpsonsData = array(
             )
         ),
         array(
-            "name" => "Bart",
+            "name" => "Bartolomew",
             "age" => 10,
             "links" => array(
                 "self" => array("href" => "/simpsons/character/3", "method" => "GET"),

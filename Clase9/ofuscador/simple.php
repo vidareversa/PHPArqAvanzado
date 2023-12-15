@@ -48,6 +48,7 @@ mostrarMenu();
 
 while (true) {
     echo "\nIngrese su elección: ";
+/* The line `     = trim(fgets(STDIN));` is used to read user input from the command line. */
     $opcion = trim(fgets(STDIN));
 
     switch ($opcion) {

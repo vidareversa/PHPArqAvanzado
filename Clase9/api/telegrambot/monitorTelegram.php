@@ -4,11 +4,12 @@ require __DIR__ . '/vendor/autoload.php';
 
 use SergiX44\Nutgram\Nutgram;
 
-$token = '6427066178:AAFfIh5QHdRqtcaer4A40tmE5ZLlgcRZREA';
+$token = 'tokenalfanumerico123';
 $bot = new Nutgram($token);
 
+// --aca empieza la funcionalidad -- //
 $bot->onCommand('start', function(Nutgram $bot) {
-    $bot->sendMessage('Holas charolas!');
+    $bot->sendMessage('Soy un bot de telegram');
 });
 
 $bot->onCommand('miApi', function(Nutgram $bot) {

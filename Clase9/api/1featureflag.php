@@ -4,7 +4,7 @@ require_once 'storage/simpsonsData.php';
 
 // Define feature flags para cada método
 $featureFlags = array(
-    'GET'    => true,
+    'GET'    => false,
     'POST'   => false, // Puedes cambiar esto dinámicamente según tus necesidades
     'PUT'    => true,
     'DELETE' => false
@@ -25,7 +25,7 @@ if (array_key_exists($requestMethod, $featureFlags)) {
                         "about" => "/simpsons/about"
                     )
                 );
-                echo json_encode($response);
+                echo json_encode($response, JSON_PRETTY_PRINT);
             } else {
                 echo json_encode(array("error" => "Disparador incorrecto"));
             }
