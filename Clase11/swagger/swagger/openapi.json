@@ -1,0 +1,98 @@
+{
+    "openapi": "3.0.0",
+    "info": "ApiInfo",
+    "paths": {
+        "/books": {
+            "get": {
+                "tags": [
+                    "Libros"
+                ],
+                "summary": "Obtiene la lista de libros",
+                "operationId": "8bc7418e06ab9f189136fc0e971e3302",
+                "responses": {
+                    "200": {
+                        "description": "Lista de libros",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "properties": {
+                                            "id": {
+                                                "type": "integer",
+                                                "format": "int64"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "author": {
+                                                "type": "string"
+                                            },
+                                            "published_at": {
+                                                "type": "string",
+                                                "format": "date"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/books/{id}": {
+            "get": {
+                "tags": [
+                    "Libros"
+                ],
+                "summary": "Obtiene un libro por su ID",
+                "operationId": "3214377e1466d345ee8f0cbd8a5a9194",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID del libro",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Detalles del libro",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer",
+                                            "format": "int64"
+                                        },
+                                        "title": {
+                                            "type": "string"
+                                        },
+                                        "author": {
+                                            "type": "string"
+                                        },
+                                        "published_at": {
+                                            "type": "string",
+                                            "format": "date"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Libro no encontrado"
+                    }
+                }
+            }
+        }
+    }
+}

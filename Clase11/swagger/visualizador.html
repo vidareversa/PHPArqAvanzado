@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swagger UI</title>
+  <link rel="stylesheet" type="text/css" href="./vendor/swagger-api/swagger-ui/dist/swagger-ui.css">
+</head>
+<body>
+  <div id="swagger-ui"></div>
+  <script src="./vendor/swagger-api/swagger-ui/dist/swagger-ui-bundle.js"></script>
+  <script src="./vendor/swagger-api/swagger-ui/dist/swagger-ui-standalone-preset.js"></script>
+  <script>
+    const ui = SwaggerUIBundle({
+      url: "http://localhost/EducacionIt/Clase11/swagger/swagger/openapi.json", // Reemplaza con la ruta correcta de tu especificación OpenAPI
+      dom_id: '#swagger-ui',
+      presets: [
+        SwaggerUIBundle.presets.apis,
+        SwaggerUIStandalonePreset,
+      ],
+      layout: "StandaloneLayout",
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^6.9",
+        "dragonmantank/cron-expression": "^3.3",
+        "php-imap/php-imap": "^2.0"
+    }
+}
