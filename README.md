@@ -1,4 +1,6 @@
-# Proyecto: Material Didáctico — 11 Clases de PHP
+# Material Didáctico — 11 Clases de PHP para estudiar Arquitectura de Software con Base en PHP
+
+POO basico, Principios SOLID, hasta arquitectura de una API en el modelo de Madurez de Richardson  
 
 ## **Descripción General**
 - **Qué es:** Colección de ejemplos y ejercicios en PHP organizados en 11 carpetas (`Clase1`…`Clase11`) para enseñar conceptos de programación orientada a objetos, patrones, PSR, autoloaders, APIs REST, colas, pruebas y programación dirigida por eventos.
@@ -82,5 +84,3 @@ Notas:
 - Ejecutar un `composer install` en los sub-proyectos que usan `composer` (p. ej. `Clase6/autocargaPSR4`, `Clase11/swagger`) para habilitar autoload y dependencias.
 - Crear un script de integración de pruebas que valide los flujos principales (crear usuario, emitir eventos, registro, endpoints REST).
 
----
-Generado por análisis rápido del código en `Clase1`…`Clase11`. Si quieres que cree el archivo `README.md` dentro del repo o que refine el contenido (más detalle por archivo o extraiga métodos exactamente), dime qué nivel de detalle deseas.
